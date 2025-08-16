@@ -5,7 +5,7 @@ print("Printing jokes ... ")
 print(joke)
 import pyttsx3
 
-# Initialize the TTS engine
+
 engine = pyttsx3.init()
 
 # Set properties (optional)
