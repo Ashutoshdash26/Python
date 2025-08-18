@@ -11,3 +11,6 @@ data1=pd.DataFrame(data=Iris.data,columns=Iris.feature_names),Iris.target
 data1 = pd.DataFrame(data=iris.data, columns=iris.feature_names)
 data1['target']=Iris.target
 data1.head()
+print(data1[45:50])
+print(data1[50:60])
+print(data1[101:105])
