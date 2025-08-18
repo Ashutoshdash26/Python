@@ -1,0 +1,15 @@
+import numpy as np
+import pandas as pd
+a=np.array([1,2,3,4,5,6],dtype=int)
+print(a)
+df=pd.DataFrame(a)
+print(df)
+A=np.arange(15).reshape(3,5)
+print(A)
+df1=pd.DataFrame(A)
+print(df1)
+print(A[0][0])
+print(df1[0][0])
+print(df1[0:0])
+print(df1.loc[0,0])
+print(df1.iloc[1,1])
