@@ -1,0 +1,2 @@
+import fun
+fun.hello()
