@@ -2,8 +2,8 @@ import fun
 fun.hello()
 from fun import hello
 hello()
-# from lib.dog import hell
-# hell()
+from lib.dog import hell
+hell()
 
 # from lib.dog import *
 # dog1 = Dog("Buddy", 3)

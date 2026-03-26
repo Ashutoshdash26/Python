@@ -1,1 +1,2 @@
-lib.cat.hell()
+from lib.dog import hell
+hell()
