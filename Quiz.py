@@ -14,4 +14,7 @@ q3 = input("Python is a (language/animal)? ")
 if q3.lower() == "language":
     score += 1
 
+
+
+
 print("Your score:", score)
