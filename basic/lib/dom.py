@@ -6,7 +6,11 @@ class animal:
     def walk():
         print("Walking ... ")
 
-
+class Parrot(animal):
+    def __init__(self,name):
+        self.name=name
+    def display(self):
+        print(f"The parrot name is {self.name}")
 
 class Book:
     def __init__(self, title):
