@@ -3,7 +3,7 @@ def bark(name="roger"):
 
 
 class animal:
-    def walk():
+    def walk(self):
         print("Walking ... ")
 
 class Parrot(animal):
