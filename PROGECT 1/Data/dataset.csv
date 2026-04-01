@@ -1,0 +1,11 @@
+age,gender,bp,sugar,fever,cough,chest_pain,fatigue,disease
+45,0,140,180,0,0,1,1,Heart Disease
+50,1,130,150,0,0,0,1,Diabetes
+60,0,150,200,0,1,1,1,Hypertension
+35,1,120,90,1,1,0,0,Pneumonia
+29,0,110,85,0,0,0,0,Gastroenteritis
+50,1,135,170,0,0,1,1,Heart Disease
+55,0,140,200,0,0,0,1,Diabetes
+65,1,155,210,0,1,1,1,Hypertension
+30,0,115,85,1,1,0,0,Pneumonia
+33,1,112,90,0,0,0,0,Gastroenteritis
