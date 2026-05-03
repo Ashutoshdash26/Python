@@ -1,6 +1,7 @@
 
 def say(name="Ashutosh Dash "):
     global count
+    count=0
     def talk():
         global count
         count=count+1
