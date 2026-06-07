@@ -9,3 +9,8 @@ from enum import Enum
 class State(Enum):
     INCATIVE=0
     ACTIVE=1
+print(State["ACTIVE"].value)
+print(State.ACTIVE)         # State.ACTIVE
+print(State.ACTIVE.value)   # 1
+print(State["ACTIVE"])      # State.ACTIVE
+print(State["ACTIVE"].value)# 1
