@@ -383,32 +383,118 @@
 
 
 # Using a loop to generate a list of square numbers
-squr = []
-for x in range(1, 11):
-    sq = x**2
-    squr.append(sq)
-print("Using For : ", squr)
+# squr = []
+# for x in range(1, 11):
+#     sq = x**2
+#     squr.append(sq)
+# print("Using For : ", squr)
 
-# Using a comprehension to generate a list of square numbers
-squr = [x**2 for x in range(1, 11)]
-print("Using List Comprehension : ", squr)
-
-
-
-# Using a loop to convert a list of names to upper case
-colors = ['Red', 'Blue', 'Green', 'Black', 'White']
-upper_cols = []
-for cols in colors:
-    upper_cols.append(cols.upper())
-
-print("Using Normal method : ", upper_cols)
+# # Using a comprehension to generate a list of square numbers
+# squr = [x**2 for x in range(1, 11)]
+# print("Using List Comprehension : ", squr)
 
 
+
+# # Using a loop to convert a list of names to upper case
+# colors = ['Red', 'Blue', 'Green', 'Black', 'White']
+# upper_cols = []
+# for cols in colors:
+#     upper_cols.append(cols.upper())
+
+# print("Using Normal method : ", upper_cols)
 
 
 
 
-# Using a comprehension to convert a list of names to upper case
-colors = ['Red', 'Blue', 'Green', 'Black', 'White']
-upper_cols = [cols.upper() for cols in colors]
-print("Using List Comprehension : ", upper_cols)
+
+
+# # Using a comprehension to convert a list of names to upper case
+# colors = ['Red', 'Blue', 'Green', 'Black', 'White']
+# upper_cols = [cols.upper() for cols in colors]
+# print("Using List Comprehension : ", upper_cols)
+
+
+
+## Exception handling
+# try
+# except
+# raise
+# finally
+
+try:
+    num = int(input("Enter a number: "))
+    print(10 / num)
+
+except ZeroDivisionError:
+    print("Division by zero is not allowed.")
+
+except ValueError:
+    print("Please enter a valid integer.")
+
+
+
+try:
+    age = int(input("Enter your age: "))
+
+    if age < 18:
+        raise ValueError("Age must be at least 18.")
+
+except ValueError as e:
+    print("Error:", e)
+
+else:
+    print("Eligible")
+
+finally:
+    print("Thank You!")
+
+
+
+x = 10
+y = 0
+l1 = [30,20,10,40,50]
+
+res = x + y
+print(f"The sum of {x} and {y} is {res}")
+
+res = x * y
+print(f"The prod of {x} and {y} is {res}")
+
+try:
+    res = z / y
+    print(f"The div of {x} and {y} is {res}")
+except (ZeroDivisionError,IndexError) :
+    print("ZDE / IE is handled")
+except :
+    print("All other exception will be handled")
+
+res = x - y
+print(f"The sub of {x} and {y} is {res}")
+
+
+
+def withdraw(balance, amount):
+    try:
+        if amount > balance:
+            raise ValueError("Insufficient Balance")
+
+        balance -= amount
+        print("Remaining Balance:", balance)
+
+    except ValueError as e:
+        print(e)
+
+    finally:
+        print("Transaction Completed")
+
+withdraw(5000, 2000)
+
+
+class MyError(Exception):
+    pass
+
+try:
+    raise MyError("This is my custom exception.")
+
+except MyError as e:
+    print("Caught:", e)
