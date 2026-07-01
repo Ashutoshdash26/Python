@@ -180,22 +180,45 @@
 
 
 
-def perform(**kwargs):
-    print(kwargs)
-    print(type(kwargs))
+# def perform(**kwargs):
+#     print(kwargs)
+#     print(type(kwargs))
 
-perform(banana=5, mango=10, cherry=4)
-
-
-
-def perform(a, b, **kwargs):
-    print(kwargs)
-    if kwargs['action'] == 'mul':
-        return a * b
-    else:
-        return a + b
+# perform(banana=5, mango=10, cherry=4)
 
 
-print(perform(20, 15, action='aaa'))
 
-print(perform(20, 15, action='mul'))
+# def perform(a, b, **kwargs):
+#     print(kwargs)
+#     if kwargs['action'] == 'mul':
+#         return a * b
+#     else:
+#         return a + b
+
+
+# print(perform(20, 15, action='aaa'))
+
+# print(perform(20, 15, action='mul'))
+
+
+
+
+#day 3-------------------------------------------------------------------------
+#1/07/2026
+
+
+f=lambda x:x*x
+print(f(8))
+
+g=lambda x,y,z:x**y+z
+print(g(5,6,7))
+check_age=lambda age:"Adult" if age>=18 else "Minor"
+print(check_age(25))
+
+
+#map filter reduce
+
+l1=[3,4,5,7.3,9]
+print(list(map(lambda x:x*x,l1)))
+print(tuple(map(lambda x:x*x,l1)))
+print(set(map(lambda x:x*x,l1)))
