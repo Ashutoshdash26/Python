@@ -207,18 +207,208 @@
 #1/07/2026
 
 
-f=lambda x:x*x
-print(f(8))
+# f=lambda x:x*x
+# print(f(8))
 
-g=lambda x,y,z:x**y+z
-print(g(5,6,7))
-check_age=lambda age:"Adult" if age>=18 else "Minor"
-print(check_age(25))
+# g=lambda x,y,z:x**y+z
+# print(g(5,6,7))
+# check_age=lambda age:"Adult" if age>=18 else "Minor"
+# print(check_age(25))
 
 
-#map filter reduce
+# #map filter reduce
 
-l1=[3,4,5,7.3,9]
-print(list(map(lambda x:x*x,l1)))
-print(tuple(map(lambda x:x*x,l1)))
-print(set(map(lambda x:x*x,l1)))
+# l1=[3,4,5,7.3,9]
+# print(list(map(lambda x:x*x,l1)))
+# print(tuple(map(lambda x:x*x,l1)))
+# print(set(map(lambda x:x*x,l1)))
+
+
+# print(list(filter(lambda x:x%2==0,l1)))
+
+# from functools import reduce
+# print(reduce(lambda x,y:x*y,l1))
+
+
+# l2=[20,40,10,40,25,19,11]
+# l2=list(filter(lambda x:x%2!=0,l2))
+# l2=list((map(lambda x:x*x,l2)))
+# print(reduce(lambda x,y:x+y,l2))
+# print(l2)
+
+# from functools import reduce
+
+# l2 = [20, 40, 10, 40, 25, 19, 11]
+
+# result = reduce(
+#     lambda x, y: x + y,
+#     map(
+#         lambda x: x * x,
+#         filter(lambda x: x % 2 != 0, l2)
+#     )
+# )
+
+# print(result)
+
+# --- Part 1: any and all ---
+# boolean_list = [True, True, False]
+
+# # Check if all elements are true
+# result1 = all(boolean_list)
+# print("all will return ==>", result1)
+
+# result2 = any(boolean_list)
+# print("any will return ==>", result2)
+
+
+# # --- Part 2: enumerate ---
+# languages = ['Python', 'Java', 'JavaScript']
+# enumerate_prime = enumerate(languages)
+
+# # Convert enumerate object to list
+# print(list(enumerate_prime))
+
+
+
+# # --- Part 3: abs function ---
+# x = -200
+# print(abs(x))
+
+
+
+# languages = ['Python', 'Java', 'JavaScript']
+
+# for index, language in enumerate(languages, start=1):
+#     print(index, language)
+
+
+# fruits = ("Apple", "Banana", "Mango")
+
+# for i, fruit in enumerate(fruits):
+#     print(i, fruit)
+
+# word = "Python"
+
+# for index, letter in enumerate(word):
+#     print(index, letter)
+
+
+# --- Part 1: Using the reversed() function on different sequences ---
+
+# For string
+# seq_string = 'Python'
+# print(list(reversed(seq_string)))
+
+# # For tuple
+# seq_tuple = ('P', 'y', 't', 'h', 'o', 'n')
+# print(list(reversed(seq_tuple)))
+
+# # For range
+# seq_range = range(5, 9)
+# print(list(reversed(seq_range)))
+
+# # For list
+# seq_list = [1, 2, 4, 3, 5]
+# print(list(reversed(seq_list)))
+
+
+# # --- Part 2: Sorting a list using sorted() ---
+
+# numbers = [4, 2, 12, 8]
+# sorted_numbers = sorted(numbers)
+# print(sorted_numbers)
+
+
+# # --- Part 3: Creating lists (Partially visible at the bottom) ---
+
+# languages = ['Java', 'Python', 'JavaScript', 'C++', 'Scala']
+# versions = [14, 3, 6]
+
+# # Printing them out to complete the snippet logically
+# print(languages)
+# print(versions)
+
+# numbers = [10, 20, 30, 40, 50]
+
+# print(list(reversed(numbers)))
+
+# def make_pretty(func):
+#     def inner():
+#         print("I got decorated")
+#         func()
+#     return inner
+
+# #makepretty(ordinary)
+# @make_pretty
+# def ordinary():
+#     print("I am ordinary")
+
+# ordinary()
+
+
+
+
+# def welcome(func):
+#     def inner():
+#         print("Welcome!")
+#         func()
+#         print("Thank you!")
+#     return inner
+
+# @welcome
+# def greet():
+#     print("Hello")
+
+# greet()
+
+
+
+# def login_required(func):
+#     def inner():
+#         password = input("Enter Password: ")
+
+#         if password == "admin123":
+#             func()
+#         else:
+#             print("Access Denied!")
+
+#     return inner
+
+# @login_required
+# def profile():
+#     print("Welcome to your Profile")
+
+# profile()
+
+
+
+# Using a loop to generate a list of square numbers
+squr = []
+for x in range(1, 11):
+    sq = x**2
+    squr.append(sq)
+print("Using For : ", squr)
+
+# Using a comprehension to generate a list of square numbers
+squr = [x**2 for x in range(1, 11)]
+print("Using List Comprehension : ", squr)
+
+
+
+# Using a loop to convert a list of names to upper case
+colors = ['Red', 'Blue', 'Green', 'Black', 'White']
+upper_cols = []
+for cols in colors:
+    upper_cols.append(cols.upper())
+
+print("Using Normal method : ", upper_cols)
+
+
+
+
+
+
+# Using a comprehension to convert a list of names to upper case
+colors = ['Red', 'Blue', 'Green', 'Black', 'White']
+upper_cols = [cols.upper() for cols in colors]
+print("Using List Comprehension : ", upper_cols)
