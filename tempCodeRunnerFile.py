@@ -1,5 +1,9 @@
-print(bin(20))
-# b=bin(10)
-# a = 10
-# print(a << 2)
-# print(bin(a << 2))
+def myfun(arg1, *argv):
+    print("First Argument:", arg1)
+
+    for arg in argv:
+        print("Argument:", arg)
+
+    print("#" * 20)
+    print("The argv:", argv)
+    print("#" * 20)
