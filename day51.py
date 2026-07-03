@@ -28,3 +28,32 @@ data = pd.read_parquet("abc.parquet")
 result = data[data["age"] > 20]
 
 print(result)
+
+print("____________________________________________")
+
+
+
+
+
+
+# 1. Create the DataFrame
+data = {
+    "Product": ["Laptop", "Mouse", "Monitor"],
+    "Price": [1200.50, 25.00, 300.00],
+    "Stock": [15, 120, 45]
+}
+df = pd.DataFrame(data)
+
+# # 2. Write DataFrame to a Parquet file
+# # 'engine' defaults to 'auto' but specifying 'pyarrow' ensures explicit behavior
+df.to_parquet("inventory.parquet", engine="pyarrow", compression="snappy", index=False)
+print("File written successfully!")
+
+# # 3. Read Parquet file back into a DataFrame
+df_read = pd.read_parquet("inventory.parquet", engine="pyarrow")
+
+# # Display the data
+print("\nRead DataFrame:")
+print(df_read)
+print(df_read["Product"])
+
