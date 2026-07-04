@@ -1,9 +1,12 @@
-def myfun(arg1, *argv):
-    print("First Argument:", arg1)
-
-    for arg in argv:
-        print("Argument:", arg)
-
-    print("#" * 20)
-    print("The argv:", argv)
-    print("#" * 20)
+import csv
+name=input("Enter a name : ")
+with open("study.csv","r") as file:
+    reader=csv.DictReader(file)
+    
+    su=False
+    for row in reader:
+        if(row["Course"].lower()== name.lower()):
+            print(row)
+            su=True
+    if not su:
+        print("Record not found ")

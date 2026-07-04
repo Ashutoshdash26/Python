@@ -56,4 +56,3 @@ df_read = pd.read_parquet("inventory.parquet", engine="pyarrow")
 print("\nRead DataFrame:")
 print(df_read)
 print(df_read["Product"])
-

@@ -59,3 +59,32 @@ with open("study.csv", "r") as file:
     for row in reader:
         print(row)
   
+
+
+
+
+
+print("---------------------------------------------------------------------")
+
+with open("study.csv", "r") as file:
+    reader = csv.reader(file)
+    for row in reader:
+        # {} {} {} {} creates four placeholders separated by tabs (\t)
+        print("{:<5} {:<13} {:<5} {:<5}".format(*row))
+
+
+    file.seek(0)
+
+
+import csv
+name=input("Enter a name : ")
+with open("study.csv","r") as file:
+    reader=csv.DictReader(file)
+    
+    su=False
+    for row in reader:
+        if(row["Course"].lower()== name.lower()):
+            print(row)
+            su=True
+    if not su:
+        print("Record not found ")
