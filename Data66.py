@@ -60,3 +60,17 @@
 # print(g(5,6,7))
 # check_age=lambda age:"Adult" if age>=18 else "Minor"
 # print(check_age(25))
+
+# l1=[4,5,6,7,8,9]
+# print(list(map(lambda x:x*x,l1)))
+# print(list(filter(lambda z:z%2==0,l1)))
+
+# from functools import reduce
+# print(reduce(lambda x,y:x+y,l1))
+
+# # --- Part 2: enumerate ---
+# languages = ['Python', 'Java', 'JavaScript']
+# enumerate_prime = enumerate(languages)
+
+# # Convert enumerate object to list
+# print(list(enumerate_prime))
