@@ -36,8 +36,27 @@
 
 # myfun("Hello", "to", "Python", "Program")
 
-def perform(**kwargs):
-    print(kwargs)
-    print(type(kwargs))
+# def perform(**kwargs):
+#     print(kwargs)
+#     print(type(kwargs))
 
-perform(banana=5, mango=10, cherry=4)
+# perform(banana=5, mango=10, cherry=4)
+
+# def perform(a, b, **kwargs):
+#     print(kwargs)
+#     if kwargs['action'] == 'mul':
+#         return a * b
+#     else:
+#         return a + b
+
+
+# print(perform(20, 15, action='aaa'))
+
+# print(perform(20, 15, action='mul'))
+
+
+
+# g=lambda x,y,z:x**y+z
+# print(g(5,6,7))
+# check_age=lambda age:"Adult" if age>=18 else "Minor"
+# print(check_age(25))
