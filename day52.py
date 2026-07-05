@@ -121,3 +121,7 @@ with open("study.csv", "r+", newline="") as file:
 
 print("Update Successful!")
 
+
+
+print("___________________________________________________")
+
