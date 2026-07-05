@@ -1,12 +1,8 @@
-import csv
-name=input("Enter a name : ")
-with open("study.csv","r") as file:
-    reader=csv.DictReader(file)
-    
-    su=False
-    for row in reader:
-        if(row["Course"].lower()== name.lower()):
-            print(row)
-            su=True
-    if not su:
-        print("Record not found ")
+def adder(*num):
+#     sum=0
+#     print(*num)
+#     for n in num:
+#         sum=sum+n
+#     print("Sum : ",sum)
+# adder()
+# adder(10,20,30,40)
