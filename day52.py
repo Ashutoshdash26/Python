@@ -83,8 +83,41 @@ with open("study.csv","r") as file:
     
     su=False
     for row in reader:
-        if(row["Course"].lower()== name.lower()):
+        if(row["Name"].lower()== name.lower()):
             print(row)
             su=True
     if not su:
         print("Record not found ")
+
+
+
+
+import csv
+
+rows = []
+# 1. Rename 'input' variable so it doesn't conflict with Python's input() function
+search_id = input("Enter the id you are searching for: ")
+
+with open("study.csv", "r+", newline="") as file: 
+    reader = csv.reader(file)
+    
+    # Read everything into memory first
+    all_rows = list(reader)
+    
+    for row in all_rows:
+        if row: # Ensure the row isn't empty
+            # 2. Compare string to string (search_id is a string)
+            if row[0] == search_id: 
+                new_id = input(f"ID {search_id} found! Enter the new ID you want to change it to: ")
+                row[0] = new_id  # Update the ID column (index 0)
+                
+            rows.append(row) # Keep track of all rows (modified or not)
+            
+    # 3. Rewrite the file cleanly using r+ mechanisms
+    file.seek(0)
+    writer = csv.writer(file)
+    writer.writerows(rows)
+    file.truncate() # Chop off any leftover old data
+
+print("Update Successful!")
+
