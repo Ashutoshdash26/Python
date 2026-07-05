@@ -74,3 +74,23 @@
 
 # # Convert enumerate object to list
 # print(list(enumerate_prime))
+
+
+
+# x = -200
+# print(abs(x))
+
+
+def make_pretty(func):
+    def inner():
+        print("I got decorated")
+        func()
+        print("1")
+    return inner
+
+#makepretty(ordinary)
+@make_pretty
+def ordinary():
+    print("I am ordinary")
+
+ordinary()

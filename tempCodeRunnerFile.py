@@ -1,8 +1,12 @@
-def adder(*num):
-#     sum=0
-#     print(*num)
-#     for n in num:
-#         sum=sum+n
-#     print("Sum : ",sum)
-# adder()
-# adder(10,20,30,40)
+def make_pretty(func):
+    def inner():
+        print("I got decorated")
+        func()
+    return inner
+
+#makepretty(ordinary)
+@make_pretty
+def ordinary():
+    print("I am ordinary")
+
+ordinary()
